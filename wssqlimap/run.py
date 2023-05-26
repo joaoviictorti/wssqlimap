@@ -5,7 +5,7 @@ from urllib.parse import unquote, urlparse
 class Send_Websocket():	
 
     def __init__(self,websocket:str):
-        self.__webscocket = websocket
+        self.__websocket = websocket
 
     def enviar_ws(self,payload):
         servidor_ws =  self.__websocket

